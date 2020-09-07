@@ -1,11 +1,7 @@
 def solution(n, build_frame):
-
     def is_safe_beam(x, y):
-        if P[x][y - 1] or P[x + 1][y - 1]:
+        if (P[x][y - 1] or P[x + 1][y - 1]) or (B[x - 1][y] and B[x + 1][y]):
             return True
-        elif B[x - 1][y] and B[x + 1][y]:
-            return True
-
 
     def is_safe_pillar(x, y):
         if y == 0 or P[x][y - 1] or B[x][y] or B[x - 1][y]:
@@ -13,8 +9,7 @@ def solution(n, build_frame):
 
     answer = []
     N = n + 1
-    P = [[0] * N for _ in range(N)]
-    B = [[0] * N for _ in range(N)]
+    P, B = [[0] * N for _ in range(N)], [[0] * N for _ in range(N)]
 
     for x, y, beam, install in build_frame:
         if install:
@@ -22,7 +17,6 @@ def solution(n, build_frame):
                 B[x][y] = 1
             elif not beam and is_safe_pillar(x, y):
                 P[x][y] = 1
-
         else:
             if beam:
                 B[x][y] = 0
