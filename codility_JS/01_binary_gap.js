@@ -1,5 +1,6 @@
 /*
-title : codility training task 01 : binary gap
+title : codility lesson 01 - binary gap
+about : iterations
 date  : 2020.09.26
 link  : https://app.codility.com/demo/results/trainingBSVTE9-BHA/  
  */
