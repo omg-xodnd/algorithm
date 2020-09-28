@@ -1,5 +1,5 @@
 /*
-title : codility lesson 02 - cyclic rotation
+title : cyclic rotation
 about : Arrays
 date  : 2020.09.26
 link  : https://app.codility.com/demo/results/training8UF3ZB-77E/
